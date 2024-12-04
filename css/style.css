@@ -1,0 +1,99 @@
+:root{
+  --color-green: hsl(75, 94%, 57%);
+  --color-white: hsl(0,0%,100%);
+  --color-grey-700: hsl(0, 0%, 20%);
+  --color-grey-800: hsl(0,0%,12%);
+  --color-grey-900: hsl(0,0%,8%);
+}
+
+@font-face {
+  font-family: "Inter";
+  src:
+  url("../assets/fonts/static/Inter-Regular.ttf") format("truetype"),
+  url("../assets/fonts/static/Inter-SemiBold.ttf") format("truetype"),
+  url("../assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 400 600 700;
+}
+
+*,
+  *::before,
+  *::after {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+  }
+
+  html{
+    font-size: 87.5%; /*14px*/
+    font-family:'Inter', sans-serif;
+  }
+
+  body{
+    background-color: var(--color-grey-900);
+  }
+  .card{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background-color: var(--color-grey-800);
+    border-radius: 1rem;
+    padding: 2rem;
+    display:inline-block;
+    text-align:center;
+    width: 20rem;
+    box-shadow:0 1rem 5rem rgba(var(--color-grey-800),.2);
+  }
+
+  .card__image{
+    border-radius: 50%;
+    height: 5rem;
+    left:50%;
+  }
+
+  .header--1{
+    color:var(--color-white);
+    font-weight:800;
+    font-size: 1.5rem;
+  }
+
+  .header--2{
+    color:var(--color-green);
+    font-size:.9rem;
+    font-weight:900;
+    text-transform:capitalize;
+    padding: .5rem;
+  }
+
+  .description{
+    padding: 1rem 0;
+    color: var(--color-white);
+  }
+
+  .nav{
+    list-style:none;
+  }
+
+  li{
+    padding: 1rem;
+    background-color: var(--color-grey-700);
+    margin: 1rem;
+    border-radius:.5rem;
+    cursor:pointer;
+  }
+
+  li:active {
+    background-color:var(--color-green);
+    color: var(--color-grey-900);
+  }
+
+  a:link,
+  a:visited{
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight:900;
+  }
+
+  li:active a{
+    color: var(--color-grey-900);
+  }
